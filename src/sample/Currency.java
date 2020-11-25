@@ -10,13 +10,13 @@ public class Currency
         this.sign = sign;
         this.value = value;
     }
+
+    public String getSign()
+    {
+        return sign;
+    }
     public double getValue()
     {
         return value;
     }
-    public void setValue(double value)
-    {
-        this.value = value;
-    }
-
 }

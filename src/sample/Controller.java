@@ -2,11 +2,15 @@ package sample;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-public class Controller extends CurrencyConverter
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Controller implements Initializable
 {
     @FXML Button convert = new Button();
 
@@ -21,9 +25,15 @@ public class Controller extends CurrencyConverter
             public void handle(MouseEvent mouseEvent)
             {
                 double x = Double.parseDouble(TextFieldEuro.getText());
-                TextFieldYen.setText(String.valueOf(EuroToYen(x)));
+                TextFieldYen.setText(String.valueOf((x)));
             }
         };
           convert.addEventHandler(MouseEvent.MOUSE_CLICKED, handler);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+
     }
 }
