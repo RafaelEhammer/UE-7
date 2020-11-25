@@ -29,6 +29,6 @@
       <TextField fx:id="TextFieldEuro" onAction="#doConvertion" GridPane.rowIndex="6" />
       <Button fx:id="convert" mnemonicParsing="false" onAction="#doConvertion" text="Convert" GridPane.columnIndex="1" GridPane.rowIndex="6" />
       <TextField fx:id="TextFieldYen" onAction="#doConvertion" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-      <ChoiceBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <ChoiceBox fx:id="choicebox" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
    </children>
 </GridPane>

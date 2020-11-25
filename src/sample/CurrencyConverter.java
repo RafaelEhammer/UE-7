@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CurrencyConverter
 {
-    private ArrayList<Currency> currency = new ArrayList<Currency>();
+    public ArrayList<Currency> currency = new ArrayList<Currency>();
 
     public CurrencyConverter()
     {
@@ -12,14 +12,9 @@ public class CurrencyConverter
         currency.add(new Currency("USD", 1.19));
     }
 
-    public ArrayList<String> getSigns()
+    public String getSigns(int i)
     {
-        ArrayList<String> string = new ArrayList<String>();
-        for (Currency cur : currency)
-        {
-            string.add(cur.getSign());
-        }
-        return string;
+        return currency.get(i).getSign();
     }
     public double euroTo (String sign, double euro)
     {
@@ -30,6 +25,6 @@ public class CurrencyConverter
             if (cur.getSign().equals(sign))
                 value = cur.getValue();
         }
-        return euro = value;
+        return euro * value;
     }
 }
